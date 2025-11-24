@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title> Ludo </title>
+	</head>
+	<body>
+		<h1 style="font-family: Arial, Helvetica, sans-serif;"></h1>
+		
+		<!-- Non-functional Start button (HTML-only) -->
+		<form action="#" method="get" style="margin-bottom:10px;">
+
+		<!-- SVG board -->
+		<svg width="540" height="540" viewBox="0 0 540 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Static Ludo board">
+			<!-- background -->
+			<rect x="0" y="0" width="540" height="540" fill="#ffffff" stroke="#000" />
+
+			<!-- grid (15x15) subtle lines -->
+			<!-- cell size = 36 (36 * 15 = 540) -->
+			<g stroke="#bbb" stroke-width="1">
+				<!-- vertical lines -->
+				<g>
+					<line x1="36" y1="0" x2="36" y2="540" />
+					<line x1="72" y1="0" x2="72" y2="540" />
+					<line x1="108" y1="0" x2="108" y2="540" />
+					<line x1="144" y1="0" x2="144" y2="540" />
+					<line x1="180" y1="0" x2="180" y2="540" />
+					<line x1="216" y1="0" x2="216" y2="540" />
+					<line x1="252" y1="0" x2="252" y2="540" />
+					<line x1="288" y1="0" x2="288" y2="540" />
+					<line x1="324" y1="0" x2="324" y2="540" />
+					<line x1="360" y1="0" x2="360" y2="540" />
+					<line x1="396" y1="0" x2="396" y2="540" />
+					<line x1="432" y1="0" x2="432" y2="540" />
+					<line x1="468" y1="0" x2="468" y2="540" />
+					<line x1="504" y1="0" x2="504" y2="540" />
+				</g>
+				<!-- horizontal lines -->
+				<g>
+					<line x1="0" y1="36" x2="540" y2="36" />
+					<line x1="0" y1="72" x2="540" y2="72" />
+					<line x1="0" y1="108" x2="540" y2="108" />
+					<line x1="0" y1="144" x2="540" y2="144" />
+					<line x1="0" y1="180" x2="540" y2="180" />
+					<line x1="0" y1="216" x2="540" y2="216" />
+					<line x1="0" y1="252" x2="540" y2="252" />
+					<line x1="0" y1="288" x2="540" y2="288" />
+					<line x1="0" y1="324" x2="540" y2="324" />
+					<line x1="0" y1="360" x2="540" y2="360" />
+					<line x1="0" y1="396" x2="540" y2="396" />
+					<line x1="0" y1="432" x2="540" y2="432" />
+					<line x1="0" y1="468" x2="540" y2="468" />
+					<line x1="0" y1="504" x2="540" y2="504" />
+				</g>
+			</g>
+
+			<!-- Four home squares (6x6 cells each -> 216px size) -->
+			<!-- Top-left: Red -->
+			<rect x="0" y="0" width="216" height="216" fill="#ffdddd" stroke="#000" />
+			<!-- Top-right: Green -->
+			<rect x="324" y="0" width="216" height="216" fill="#ddffdd" stroke="#000" />
+			<!-- Bottom-right: Yellow -->
+			<rect x="324" y="324" width="216" height="216" fill="#ffffdd" stroke="#000" />
+			<!-- Bottom-left: Blue -->
+			<rect x="0" y="324" width="216" height="216" fill="#ddddff" stroke="#000" />
+
+			<!-- Home centers and 4 starting circles in each home -->
+			<!-- Red tokens (top-left) -->
+			<g>
+				<circle cx="54" cy="54" r="18" fill="#ff4d4d" stroke="#800" />
+				<circle cx="162" cy="54" r="18" fill="#ff9999" stroke="#800" />
+				<circle cx="54" cy="162" r="18" fill="#ff9999" stroke="#800" />
+				<circle cx="162" cy="162" r="18" fill="#ff4d4d" stroke="#800" />
+				<text x="108" y="30" font-family="Arial" font-size="14" text-anchor="middle" fill="#800">Red</text>
+			</g>
+
+			<!-- Green tokens (top-right) -->
+			<g>
+				<circle cx="378" cy="54" r="18" fill="#33cc33" stroke="#065" />
+				<circle cx="486" cy="54" r="18" fill="#99e699" stroke="#065" />
+				<circle cx="378" cy="162" r="18" fill="#99e699" stroke="#065" />
+				<circle cx="486" cy="162" r="18" fill="#33cc33" stroke="#065" />
+				<text x="432" y="30" font-family="Arial" font-size="14" text-anchor="middle" fill="#065">Green</text>
+			</g>
+
+			<!-- Yellow tokens (bottom-right) -->
+			<g>
+				<circle cx="378" cy="378" r="18" fill="#ffdd33" stroke="#886600" />
+				<circle cx="486" cy="378" r="18" fill="#fff2b3" stroke="#886600" />
+				<circle cx="378" cy="486" r="18" fill="#fff2b3" stroke="#886600" />
+				<circle cx="486" cy="486" r="18" fill="#ffdd33" stroke="#886600" />
+				<text x="432" y="342" font-family="Arial" font-size="14" text-anchor="middle" fill="#886600">Yellow</text>
+			</g>
+
+			<!-- Blue tokens (bottom-left) -->
+			<g>
+				<circle cx="54" cy="378" r="18" fill="#4d66ff" stroke="#153" />
+				<circle cx="162" cy="378" r="18" fill="#99b3ff" stroke="#153" />
+				<circle cx="54" cy="486" r="18" fill="#99b3ff" stroke="#153" />
+				<circle cx="162" cy="486" r="18" fill="#4d66ff" stroke="#153" />
+				<text x="108" y="342" font-family="Arial" font-size="14" text-anchor="middle" fill="#153">Blue</text>
+			</g>
+
+			<!-- Center square (goal area visual) -->
+			<rect x="216" y="216" width="108" height="108" fill="#f8f8f8" stroke="#000" />
+			<text x="270" y="274" font-family="Arial" font-size="16" text-anchor="middle" fill="#000">Goal</text>
+
+			<!-- Basic cross paths (visual only) -->
+			<!-- Horizontal path -->
+			<rect x="0" y="252" width="540" height="36" fill="#f0f0f0" stroke="#000" />
+			<!-- Vertical path -->
+			<rect x="252" y="0" width="36" height="540" fill="#f0f0f0" stroke="#000" />
+		</svg>
+</html>
