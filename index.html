@@ -1,39 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="mk">
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+  <meta charset="utf-8">
+  <title>Homework #4 – Lunch Special Form</title>
 </head>
 <body>
-    <h1>Добредојде на нашата страница!</h1>
 
-    <nav>
-        <a href="animal.html">Animal</a> |
-        <a href="food.html">Food</a> |
-        <a href="cities.html">Cities</a> |
-        <a href="countries.html">Countries</a>
-    </nav>
+<h1>Lunch Special Order Form</h1>
+<form action="#" method="post">
 
-    <h2>Пример на 5-нивоа вложена листа</h2>
-    <ul>
-        <li>Ниво 1
-            <ul>
-                <li>Ниво 2
-                    <ul>
-                        <li>Ниво 3
-                            <ul>
-                                <li>Ниво 4
-                                    <ul>
-                                        <li>Ниво 5</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+  <h2>Customer Info</h2>
+  <p>
+    <label>Full Name:
+      <input type="text" name="customer_name" required>
+    </label>
+  </p>
+
+  <p>
+    Eat:
+    <label><input type="radio" name="pickup" value="here" checked> Here</label>
+    <label><input type="radio" name="pickup" value="to_go"> To Go</label>
+  </p>
+
+  <h2>Sandwich Choices</h2>
+
+  <p>
+    <label>Monday:
+      <select name="monday" required>
+        <option value="">-- choose --</option>
+        <option value="tomato_mozzarella">Tomato Mozzarella</option>
+        <option value="chicken_salad">Chicken Salad</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>Tuesday:
+      <select name="tuesday" required>
+        <option value="">-- choose --</option>
+        <option value="greek_salad_wrap">Greek Salad Wrap</option>
+        <option value="tofu_wrap">Tofu Wrap</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>Wednesday:
+      <select name="wednesday" required>
+        <option value="">-- choose --</option>
+        <option value="red_pepper_hummus">Red Pepper Hummus</option>
+        <option value="roasted_turkey">Roasted Turkey</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>Thursday:
+      <select name="thursday" required>
+        <option value="">-- choose --</option>
+        <option value="carrot_ginger_hummus_wrap">Carrot-Ginger Hummus Wrap</option>
+        <option value="egg_salad">Egg Salad</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>Friday:
+      <select name="friday" required>
+        <option value="">-- choose --</option>
+        <option value="dado_wrap">Dado Wrap</option>
+        <option value="tuna_salad">Tuna Salad</option>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <input type="checkbox" name="gluten_free" value="yes">
+      Gluten-free bread (75¢ extra)
+    </label>
+  </p>
+
+  <h2>Snack</h2>
+
+  <p>
+    <label><input type="radio" name="snack" value="apple" checked> Apple</label>
+    <label><input type="radio" name="snack" value="banana"> Banana</label>
+    <label><input type="radio" name="snack" value="chips"> Potato Chips</label>
+  </p>
+
+  <h2>Drink</h2>
+
+  <p>
+    <label><input type="radio" name="drink" value="coffee" checked> Coffee or Iced Coffee</label><br>
+    <label><input type="radio" name="drink" value="peppermint"> Organic Peppermint</label><br>
+    <label><input type="radio" name="drink" value="sencha_green"> Hot or Iced Sencha Green Tea</label><br>
+    <label><input type="radio" name="drink" value="keemun_black"> Hot or Iced Keemun Black Tea</label>
+  </p>
+
+  <p>
+    <label>
+      <input type="checkbox" name="large_drink" value="yes">
+      Large drink (75¢ extra)
+    </label>
+  </p>
+
+  <h2>Notes</h2>
+  <p>
+    <textarea name="notes" rows="3" cols="30"></textarea>
+  </p>
+
+  <p>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </p>
+
+</form>
+
 </body>
 </html>
-
