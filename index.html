@@ -1,121 +1,294 @@
 <!doctype html>
-<html lang="mk">
-<head>
-  <meta charset="utf-8">
-  <title>Homework #4 – Lunch Special Form</title>
-</head>
-<body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Glow & Grow — Hair Care Products</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<h1 class="logo">Glow & Grow</h1>
+				<nav class="main-nav">
+					<a href="#products">Products</a>
+					<a href="#compare">Compare</a>
+					<a href="#media">Media</a>
+					<a href="#order">Order</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+		</header>
 
-<h1>Lunch Special Order Form</h1>
-<form action="#" method="post">
+		<section class="hero">
+			<div class="container hero-content">
+				<div class="hero-text">
+					<h2>Natural ingredients. Visible results.</h2>
+					<p>Explore our curated selection of shampoos, conditioners and treatments designed for every hair type.</p>
+					<a class="btn" href="#products">Shop Bestsellers</a>
+				</div>
+				<div class="hero-image">
+					<img src="images/20251128_133350299_iOS.webp" alt="Hair care hero image">
+				</div>
+			</div>
+		</section>
 
-  <h2>Customer Info</h2>
-  <p>
-    <label>Full Name:
-      <input type="text" name="customer_name" required>
-    </label>
-  </p>
+		<!-- Product Detail Modals -->
+		<div class="modals">
+			<div class="modal" id="modal-product1" aria-hidden="true">
+				<div class="modal-panel">
+					<button class="modal-close" aria-label="Close">✕</button>
+					<h3>Nourish Shampoo — Details</h3>
+					<p><strong>Key ingredients:</strong> Oat extract, Aloe vera, Panthenol.</p>
+					<p><strong>Description:</strong> A gentle, balancing shampoo that cleanses without stripping natural oils. Ideal for normal to dry hair.</p>
+					<p><strong>How to use:</strong> Apply to wet hair, lather, rinse. Repeat if needed.</p>
+					<p><a class="btn primary" href="#order">Buy: $12.99</a></p>
+				</div>
+			</div>
 
-  <p>
-    Eat:
-    <label><input type="radio" name="pickup" value="here" checked> Here</label>
-    <label><input type="radio" name="pickup" value="to_go"> To Go</label>
-  </p>
+			<div class="modal" id="modal-product2" aria-hidden="true">
+				<div class="modal-panel">
+					<button class="modal-close" aria-label="Close">✕</button>
+					<h3>Hydrate Conditioner — Details</h3>
+					<p><strong>Key ingredients:</strong> Shea Butter, Panthenol, Coconut Oil.</p>
+					<p><strong>Description:</strong> Deeply nourishing conditioner that detangles and restores softness to dry, brittle hair.</p>
+					<p><strong>How to use:</strong> Apply after shampooing, leave 2-5 minutes, then rinse thoroughly.</p>
+					<p><a class="btn primary" href="#order">Buy: $14.99</a></p>
+				</div>
+			</div>
 
-  <h2>Sandwich Choices</h2>
+			<div class="modal" id="modal-product3" aria-hidden="true">
+				<div class="modal-panel">
+					<button class="modal-close" aria-label="Close">✕</button>
+					<h3>Scalp Elixir — Details</h3>
+					<p><strong>Key ingredients:</strong> Niacinamide, Peppermint Oil, Biotin.</p>
+					<p><strong>Description:</strong> Lightweight serum designed to soothe and invigorate the scalp, supporting the conditions for healthy-looking hair.</p>
+					<p><strong>How to use:</strong> Apply a few drops to the scalp and massage in. Use nightly or 3x per week.</p>
+					<p><a class="btn primary" href="#order">Buy: $19.50</a></p>
+				</div>
+			</div>
 
-  <p>
-    <label>Monday:
-      <select name="monday" required>
-        <option value="">-- choose --</option>
-        <option value="tomato_mozzarella">Tomato Mozzarella</option>
-        <option value="chicken_salad">Chicken Salad</option>
-      </select>
-    </label>
-  </p>
+			<div class="modal" id="modal-product4" aria-hidden="true">
+				<div class="modal-panel">
+					<button class="modal-close" aria-label="Close">✕</button>
+					<h3>Repair Mask — Details</h3>
+					<p><strong>Key ingredients:</strong> Keratin peptides, Argan Oil, Shea Butter.</p>
+					<p><strong>Description:</strong> Intensive treatment mask that helps rebuild damaged strands and reduce breakage with regular use.</p>
+					<p><strong>How to use:</strong> Apply to towel-dried hair, leave 5-15 minutes, rinse thoroughly. Use weekly for best results.</p>
+					<p><a class="btn primary" href="#order">Buy: $18.25</a></p>
+				</div>
+			</div>
+		</div>
 
-  <p>
-    <label>Tuesday:
-      <select name="tuesday" required>
-        <option value="">-- choose --</option>
-        <option value="greek_salad_wrap">Greek Salad Wrap</option>
-        <option value="tofu_wrap">Tofu Wrap</option>
-      </select>
-    </label>
-  </p>
+		<main class="container">
+			<section id="products" class="products">
+				<h3>Featured Products</h3>
+				<div class="product-grid">
+					<article class="product-card" id="card-product1">
+						<img src="images/20251128_133452913_iOS.webp" alt="Nourish Shampoo">
+						<h4>Nourish Shampoo — Gentle Cleansing</h4>
+						<p class="price">$12.99</p>
+						<p class="muted">A balancing shampoo formulated with oat extract and aloe to gently cleanse, hydrate and improve manageability.</p>
+						<ul class="badges">
+							<li>Vegan</li>
+							<li>Sulfate-free</li>
+						</ul>
+						<div class="card-actions">
+							<button class="btn" data-product="product1">Details</button>
+							<button class="btn primary">Add to Cart</button>
+						</div>
+					</article>
 
-  <p>
-    <label>Wednesday:
-      <select name="wednesday" required>
-        <option value="">-- choose --</option>
-        <option value="red_pepper_hummus">Red Pepper Hummus</option>
-        <option value="roasted_turkey">Roasted Turkey</option>
-      </select>
-    </label>
-  </p>
+					<article class="product-card" id="card-product2">
+						<img src="images/20251128_133516319_iOS.webp" alt="Hydrate Conditioner">
+						<h4>Hydrate Conditioner — Deep Moisture</h4>
+						<p class="price">$14.99</p>
+						<p class="muted">A nourishing conditioner with shea butter and panthenol to restore softness and detangle without weighing hair down.</p>
+						<ul class="badges">
+							<li>For dry hair</li>
+							<li>Paraben-free</li>
+						</ul>
+						<div class="card-actions">
+							<button class="btn" data-product="product2">Details</button>
+							<button class="btn primary">Add to Cart</button>
+						</div>
+					</article>
 
-  <p>
-    <label>Thursday:
-      <select name="thursday" required>
-        <option value="">-- choose --</option>
-        <option value="carrot_ginger_hummus_wrap">Carrot-Ginger Hummus Wrap</option>
-        <option value="egg_salad">Egg Salad</option>
-      </select>
-    </label>
-  </p>
+					<article class="product-card" id="card-product3">
+						<img src="images/20251128_133543268_iOS.webp" alt="Scalp Elixir">
+						<h4>Scalp Elixir — Concentrated Serum</h4>
+						<p class="price">$19.50</p>
+						<p class="muted">A lightweight serum concentrated with niacinamide and peppermint oil to soothe the scalp and support healthy-looking hair growth.</p>
+						<ul class="badges">
+							<li>Strengthens</li>
+							<li>Clinically tested</li>
+						</ul>
+						<div class="card-actions">
+							<button class="btn" data-product="product3">Details</button>
+							<button class="btn primary">Add to Cart</button>
+						</div>
+					</article>
 
-  <p>
-    <label>Friday:
-      <select name="friday" required>
-        <option value="">-- choose --</option>
-        <option value="dado_wrap">Dado Wrap</option>
-        <option value="tuna_salad">Tuna Salad</option>
-      </select>
-    </label>
-  </p>
+					<article class="product-card" id="card-product4">
+						<img src="images/20251128_133609996_iOS (2).webp" alt="Repair Mask">
+						<h4>Repair Mask — Intensive Restore</h4>
+						<p class="price">$18.25</p>
+						<p class="muted">A rich treatment mask with keratin peptides and argan oil to rebuild and smooth damaged hair strands.</p>
+						<ul class="badges">
+							<li>Deep treatment</li>
+							<li>Rich in proteins</li>
+						</ul>
+						<div class="card-actions">
+							<button class="btn" data-product="product4">Details</button>
+							<button class="btn primary">Add to Cart</button>
+						</div>
+					</article>
+				</div>
+			</section>
 
-  <p>
-    <label>
-      <input type="checkbox" name="gluten_free" value="yes">
-      Gluten-free bread (75¢ extra)
-    </label>
-  </p>
+			<section id="compare" class="compare">
+				<h3>Product Comparison</h3>
+				<div class="table-wrap">
+					<table class="comparison">
+						<caption>Quick comparison of key features</caption>
+						<thead>
+							<tr>
+								<th>Product</th>
+								<th>Price</th>
+								<th>Sulfate</th>
+								<th>Suitable Hair</th>
+								<th>Size</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Nourish Shampoo</td>
+								<td>$12.99</td>
+								<td>No</td>
+								<td>Normal / Dry</td>
+								<td>300ml</td>
+							</tr>
+							<tr>
+								<td>Hydrate Conditioner</td>
+								<td>$14.99</td>
+								<td>No</td>
+								<td>Dry</td>
+								<td>250ml</td>
+							</tr>
+							<tr>
+								<td>Scalp Elixir</td>
+								<td>$19.50</td>
+								<td>No</td>
+								<td>All types</td>
+								<td>50ml</td>
+							</tr>
+							<tr>
+								<td>Repair Mask</td>
+								<td>$18.25</td>
+								<td>No</td>
+								<td>Damaged</td>
+								<td>200ml</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
 
-  <h2>Snack</h2>
+			<section id="media" class="media">
+				<h3>Media — Watch & Listen</h3>
+				<div class="media-grid">
+					<div class="media-item">
+						<h4>How to use Repair Mask</h4>
+						<video controls width="100%">
+							<source src="Untitled video - Made with Clipchamp2.mp4" type="video/mp4">
+							Your browser does not support HTML5 video.
+						</video>
+					</div>
 
-  <p>
-    <label><input type="radio" name="snack" value="apple" checked> Apple</label>
-    <label><input type="radio" name="snack" value="banana"> Banana</label>
-    <label><input type="radio" name="snack" value="chips"> Potato Chips</label>
-  </p>
+			</section>
+			<section id="order" class="order">
+				<h3>Place a quick order</h3>
+				<form class="order-form" action="#" method="post">
+					<div class="form-row">
+						<label for="name">Name</label>
+						<input id="name" name="name" type="text" placeholder="Your full name" required>
+					</div>
 
-  <h2>Drink</h2>
+					<div class="form-row two-col">
+						<div>
+							<label for="email">Email</label>
+							<input id="email" name="email" type="email" placeholder="sofronieskamartina9@gmail.com" required>
+						</div>
+						<div>
+							<label for="phone">Phone</label>
+							<input id="phone" name="phone" type="tel" placeholder="120248950">
+						</div>
+					</div>
 
-  <p>
-    <label><input type="radio" name="drink" value="coffee" checked> Coffee or Iced Coffee</label><br>
-    <label><input type="radio" name="drink" value="peppermint"> Organic Peppermint</label><br>
-    <label><input type="radio" name="drink" value="sencha_green"> Hot or Iced Sencha Green Tea</label><br>
-    <label><input type="radio" name="drink" value="keemun_black"> Hot or Iced Keemun Black Tea</label>
-  </p>
+					<div class="form-row">
+						<label for="product">Choose product</label>
+						<select id="product" name="product">
+							<option>Nourish Shampoo</option>
+							<option>Hydrate Conditioner</option>
+							<option>Scalp Elixir</option>
+							<option>Repair Mask</option>
+						</select>
+					</div>
 
-  <p>
-    <label>
-      <input type="checkbox" name="large_drink" value="yes">
-      Large drink (75¢ extra)
-    </label>
-  </p>
+					<div class="form-row">
+						<label>Preferences</label>
+						<div class="checkbox-row">
+							<label><input type="checkbox" name="subscribe"> Subscribe to tips</label>
+							<label><input type="checkbox" name="scent"> Scent sample</label>
+						</div>
+					</div>
 
-  <h2>Notes</h2>
-  <p>
-    <textarea name="notes" rows="3" cols="30"></textarea>
-  </p>
+					<div class="form-row">
+						<label for="quantity">Quantity: <span id="qtyVal">1</span></label>
+						<input id="quantity" name="quantity" type="range" min="1" max="10" value="1" oninput="document.getElementById('qtyVal').innerText = this.value">
+					</div>
 
-  <p>
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-  </p>
+					<div class="form-row">
+						<label for="notes">Notes</label>
+						<textarea id="notes" name="notes" rows="4" placeholder="Any preferences or delivery notes"></textarea>
+					</div>
 
-</form>
+					<div class="form-row">
+						<button class="btn primary" type="submit">Place Order</button>
+						<button class="btn" type="reset">Reset</button>
+					</div>
+				</form>
+			</section>
 
-</body>
-</html>
+			<section id="contact" class="contact">
+				<h3>Contact & Feedback</h3>
+				<div class="contact-grid">
+					<form class="contact-form" action="#" method="post">
+						<label for="cname">Name</label>
+						<input id="cname" name="cname" type="text" required>
+
+						<label for="cemail">Email</label>
+						<input id="cemail" name="cemail" type="email" required>
+
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" required></textarea>
+						<button class="btn primary" type="submit">Send Message</button>
+					</form>
+
+					<div class="contact-info">
+						<h4>Store Info</h4>
+						<p>123 Wellness Way<br>Beauty City, AC 90210</p>
+						<p>Email: sofronieskamartina9@gmail.com</p>
+						<p>Phone: +389 71234567 </p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<p>&copy; 2025 Glow & Grow — crafted with care.</p>
+			</div>
+		</footer>
+
+		
